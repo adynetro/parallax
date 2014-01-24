@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Trendsetter Readme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Trendsetter Template Documentation</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#1">Getting Started
+          </a>
+        </li>
+        <li>
+          <a href="#2">Navigation Bar
+          </a>
+        </li>
+        <li>
+          <a href="#3">Background Images
+          </a>
+        </li>
+        <li>
+          <a href="#4">Landing Page
+          </a>
+        </li>
+        <li>
+          <a href="#5">Portfolio Section
+          </a>
+        </li>
+        <li>
+          <a href="#6">About Section
+          </a>
+        </li>
+        <li>
+          <a href="#7">Contact Section
+          </a>
+        </li>
+      </ul>
+
+	  <br/>
+	  <br/>
+      <h2 id="1">Getting Started</h2>
+	  <hr/>
+		<p>Hello, and thank you for purchasing my theme, Trendsetter. I hope you enjoy using it!
+		</p>
+		<p>
+		To start, extract the package and upload its contents to your server. Index.html is the template file and should be functional without further setup.
+		</p>
+		<p>
+		The contact form will need to modified so that it sends emails to the correct address, more details about that here.
+		</p>
+		<p>
+		Ensure that PHP is supported by your server, or else the contact form script won't work.
+		</p>
+		<p>
+		The dummy text included in the template is hard-coded into the page. Change it to your own content.
+		</p>
+		<p>The favicon for the site is favicon.png. Change this image to change your favicon.
+		</p>
+		<br/>
+		<h3>Pages</h3>
+		<p>This theme relies on an index.html page and a series of pages for your portfolio items (one dedicated page for each of your portfolio items). In the demo package, they are the "project_*.html" files.
+		</p>
+		<p>The index.html page will contain the bulk of your info. All your text and images, excluding your portfolio items, are hard coded into the index page.
+		</p>
+		<p>The template is divided into the home, portfolio, about, and contact sections. Change the text and images in index.html to edit the content. The start and end of each section is commented in the HTML. To add or remove sections, copy and paste or delete the sections and update the navigation bar.
+		</p>
+		<br/>
+		<h3>Colors</h3>
+		<p>The theme uses two primary colors that can be adjusted in css/main.css. The elements that use colors are listed at the top of the stylesheet, along with color codes of the two default colors. Replace the color code in each of those elements using a simple find and replace with your new two colors.
+		</p>
+		<p>Alternatively, include one of the available color stylesheets in css/color/COLOR.css into the head of index.html after the main.css reference. An example blue css stylesheet is commented out in the header.
+		</p>
+		
+		<br/>
+      <h2 id="2">Navigation Bar</h2>
+	  <hr/>
+	  <p>The navigation bar uses <a href="http://getbootstrap.com/2.3.2/javascript.html#scrollspy">Bootstrap Scrollspy</a>. The links in the navigation bar link to the id of the appropriate section. When adding a section, give the first div in the section an id and use that as the href target in the navigation link.
+	  </p>
+		
+	  <br>
+      <h2 id="3">Background Images</h2>
+	  <hr/>
+      <p>Each content section has a large background image. To change these images, find the class <code>masthead-image parallax</code> at the bottom of the section and change the src to your own image. Alternatively, create your own image and overwrite the existing image by using the same filename.
+      </p>
+	  <p>The rough dimensions of the background images are <code>800 x 518</code>. It is fine to vary from this as long as your image dimension ratio is in the same ballpark.
+	  </p>
+	  <p>Each background image has a parallax effect. If you can't see it, slowly scroll with the scrollbar to see the effect.
+	  </p>
+	  
+		<br>
+      <h2 id="4">Home Section</h2>
+	  <hr/>
+      <p>Set your name and title by replacing the default generic name in the <code>h1 class="intro-text"</code> tag and <code>h2 class="intro-secondary"</code> tag.
+      </p>
+	  <p>You can change the font size of the text easily at the top of css/main.css
+	  </p>
+	  <p>Link to your social media pages with the social link icons. The social icons, and the rest of the icons in this template, are from <a href="http://fontawesome.io/">Font Awesome</a>. See their site for a list of all available icons (newer releases of icons may not be included in this template, but you can download and replace the current version).
+	  </p>
+	  <p>Icons are created using the &lt;i&gt; class. To learn more about how to use font, visit <a href="http://fontawesome.io/">Font Awesome</a>.
+	  </p>
+	  <p>To change the social media icon, change <code>class="fa fa-twitter"</code> to <code>class="fa fa-linkedin"</code> for example.
+	  </p>
+	  
+	  <br>
+      <h2 id="5">Portfolio Section</h2>
+	  <hr/>
+      <p>Each item in the portfolio section has its own page which is loaded through AJAX when you click on one of the portfolio links.
+      </p>
+	  <p>The portfolio_*.html images in the template's root folder show examples of different types of portfolio items available (image, image gallery, video).
+	  </p>
+	  <br/>
+	  <h3>Filter
+	  </h3>
+	  <p>This template uses the JQuery Isotope plugin to create the sorting effect for the portfolio links. To read how it works, <a href="http://isotope.metafizzy.co/docs/introduction.html">click here</a>.
+	  </p>
+	  <p>To set the categories, find the <code>option-isotope</code> ul list in the portoflio section. Each list item has a <code>data-option-value</code> which specifies which category class to show, and the HTML text inside the list item's anchor link is what is actually displayed on the page as the category name (such as <code>Photo</code>).
+	  </p>
+	  <p>Every sortable element in the template uses the class <code>element</code> to be designated as one of the sortable items. To sort items into categories, they have to share a common class (like <code>category1</code>. You can keep the category classes as <code>category1</code>, <code>category2</code>, and so on, because they are not actually displayed. All the items in <code>category1</code> will be shown when you click on the list link with <code>data-option-value=".category-1"</code>. Note that the <code>data-option-value</code> contains a <code>.</code> since it is targeting a class.
+	  </p>
+	  <br/>
+	  <h3>Thumbnail
+	  </h3>
+	  <p>Each portfolio item shows a thumbnail, title, category, and quick description. Simply replace the sample data with your own text and image source.
+	  </p>
+	  <p>Clicking the thumbnail loads the actual content into the page in a popup. Simply specify the page in the anchor link's <code>href</code> like a normal link and the JavaScript will handle the rest.
+	  </p>
+	  <br/>
+	  <h3>Portfolio item page
+	  </h3>
+	  <p>Each portfolio item should have its own page that you link to from the thumbnail. These pages are the project_*.html files in the sample.
+	  </p>
+	  <p>The page that the portfolio item link loads doesn't have any style on it's own until it gets loaded into the main page. Follow the structure of the existing sample portoflio items and replace their text and images with your own.
+	  </p>
+	  <p>Galleries are created with the standard <a href="http://twitter.github.io/bootstrap/javascript.html#collapse">Bootstrap Carousel</a>.
+	  </p>
+	  <p>To embed a video from Youtube or Vimeo, grab the embed code from your video and remove all the excess code that you get from it (such as the anchor link to the video, 
+	  </p>
+	  <p>Whether your main content is an image, gallery, or video, give it the class <code>portfolio-image-full</code> like in the samples.
+	  </p>
+	  
+	<br>
+      <h2 id="6">About Section</h2>
+	  <hr/>
+      <p>Replace the content in the About section with your own text. The progress skill bars can be changed by adjusting the width % in the style of the element.
+      </p>
+	<br>
+      <h2 id="7">Contact Section</h2>
+	  <hr/>
+      <p>The google maps used in the contact form uses a simple embed from the Google Maps service. Be sure to strip the default embed code that you get from Google Maps of the width and height settings.
+      </p>
+	  <p>The contact form is PHP based so ensure that you use it on a server that supports PHP with mail.
+	  </p>
+	  <p>The success message for contact form submission can also be changed here.
+	  </p>
+	 <br>
+	  <h2 id="8">Support</h2>
+	  <hr/>
+      <p>For questions, please contact me on Themeforest to leave a message.
+	  </p>
+      <br>
+	  <br>
+	  <br>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
